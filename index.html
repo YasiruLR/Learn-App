@@ -3,11 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn HTML in Sinhala 🇱🇰</title>
+    <title>Learn Box 🇱🇰</title>
+     <link rel="icon" href="assects/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+    <h1>HTML ඉගෙන ගමු </h1>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#intro">HTML මූලික දැනුම</a>
+    <a href="#example">Code උදාහරණ</a>
+    <a href="#quiz">ප්‍රශ්න පත්‍රය</a>
+  </nav>
+
+  <main>
+    <section class="lesson" id="intro">
+  <h2>1. HTML කියන්නේ මොකක්ද?</h2>
+  <p>HTML කියන්නේ <strong>HyperText Markup Language</strong> යනුවෙන් හැඳින්වෙන, වෙබ් පිටුවක ආකෘතිය (structure) සහ අන්තර්ගතය (content) සෑදීමට භාවිතා කරන භාෂාවකි. HTML භාවිතයෙන් ඔබට වෙබ් පිටුවක ටෙක්ස්ට්, රූප, ලින්ක්, ටේබල්, ෆෝරම් වැනි බොහෝ අංග සකස් කළ හැක. HTML ලේඛනයක් <em>tags</em> ලෙස හඳුන්වන විශේෂ කේත භාවිතා කරමින් ලියැවෙන අතර, මෙම ටැග්ස් බ්‍රව්සරයකට (Browser) අන්තර්ගතය පෙන්විය යුතු ආකාරය ගැන උපදෙස් දෙයි.</p>
+  <h3>HTML හි මූලික ලක්ෂණ:</h3>
+  <ul>
+    <li><strong>HyperText:</strong> වෙබ් පිටු එකිනෙකට සම්බන්ධ කිරීමට ලින්ක් (hyperlinks) භාවිතා කරයි.</li>
+    <li><strong>Markup:</strong> ටැග්ස් භාවිතයෙන් අන්තර්ගතයේ ව්‍යුහය (structure) සහ ආකෘතිය (format) නිර්වචනය කරයි.</li>
+    <li><strong>Platform-Independent:</strong> HTML ඕනෑම බ්‍රව්සරයක හෝ උපාංගයක භාවිතා කළ හැක.</li>
+  </ul>
+  <h3>සරල HTML උදාහරණයක්:</h3>
+  <pre>
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;මගේ පළමු වෙබ් පිටුව&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML වලට සාදරයෙන් පිළිගනිමු!&lt;/h1&gt;
+    &lt;p&gt;මෙය මගේ පළමු HTML පිටුවයි.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+  </pre>
+  <p>ඉහත කේතයේදී, <code>&lt;!DOCTYPE html&gt;</code> මඟින් HTML5 ලේඛනයක් බව ප්‍රකාශ කරනවා. <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, සහ <code>&lt;body&gt;</code> ටැග්ස් මඟින් වෙබ් පිටුවේ මූලික ව්‍යුහය සකස් කරනවා.</p>
+</section>
+
+    <section class="lesson" id="example">
+      <h2>2. Code උදාහරණයක්</h2>
+      <p>HTML Heading එකක් මෙහෙම ලියනවා:</p>
+      <pre>&lt;h1&gt;මම HTML ඉගෙන ගන්නෙයි&lt;/h1&gt;</pre>
+
+      <h3>ඔබම උත්සාහ කරන්න 👇</h3>
+      <textarea id="codeInput" placeholder="මෙතැන HTML code එකක් ලියන්න...">&lt;p&gt;Hello Sri Lanka!&lt;/p&gt;</textarea>
+      <button onclick="updatePreview()">Preview බලන්න</button>
+      <iframe id="preview"></iframe>
+    </section>
+
+<section class="lesson" id="quiz">
+  <h2>3. Quiz Time 🧠</h2>
+
+  <!-- Question 1 -->
+  <div id="quiz1">
+    <p>HTML Element එකක් කියන්නේ මොකක්ද?</p>
+    <div class="quiz-options">
+      <button onclick="checkAnswer('A', 'quizFeedback1', 'බැහැ, Style එකක් HTML Element එකක් නෙවෙයි. CSS වලින් style කරනවා!', 'quiz1')">A: Style එකක්</button>
+      <button onclick="checkAnswer('B', 'quizFeedback1', 'නියමයි! HTML Element එකක් තමයි වෙබ් පිටුවේ structure එක හදන්නේ. ✅', 'quiz1')">B: Structure එකක් ✅</button>
+      <button onclick="checkAnswer('C', 'quizFeedback1', 'නෑ, Server එකක් HTML Element එකක් නෙවෙයි. Server එකක් තමයි වෙබ් පිටු host කරන්නේ!', 'quiz1')">C: Server එකක්</button>
+    </div>
+    <p id="quizFeedback1"></p>
+  </div>
+
+  <!-- Question 2 -->
+  <div id="quiz2">
+    <p>HTML හි <code><p></code> tag එක භාවිතා වෙන්නේ මොකටද?</p>
+    <div class="quiz-options">
+      <button onclick="checkAnswer('A', 'quizFeedback2', 'නෑ, රූපයක් එක්කරන්නේ <img> tag එකෙන්!', 'quiz2')">A: රූපයක් එක්කරන්න</button>
+      <button onclick="checkAnswer('B', 'quizFeedback2', 'නියමයි! <p> tag එක භාවිතා වෙන්නේ paragraph එකක් හදන්න. ✅', 'quiz2')">B: Paragraph එකක් හදන්න ✅</button>
+      <button onclick="checkAnswer('C', 'quizFeedback2', 'බැහැ, ලින්ක් එකක් හදන්නේ <a> tag එකෙන්!', 'quiz2')">C: ලින්ක් එකක් හදන්න</button>
+    </div>
+    <p id="quizFeedback2"></p>
+  </div>
+
+  <!-- Question 3 -->
+  <div id="quiz3">
+    <p>HTML හි <code>id</code> attribute එකේ භාවිතය කුමක්ද?</p>
+    <div class="quiz-options">
+      <button onclick="checkAnswer('A', 'quizFeedback3', 'බැහැ, style එකක් එක්කරන්න CSS භාවිතා වෙනවා!', 'quiz3')">A: Element එකකට style එකක් එක්කරන්න</button>
+      <button onclick="checkAnswer('B', 'quizFeedback3', 'නෑ, class එකක් එක්කරන්න class attribute එක භාවිතා වෙනවා!', 'quiz3')">B: Element එකකට class එකක් එක්කරන්න</button>
+      <button onclick="checkAnswer('C', 'quizFeedback3', 'නියමයි! id attribute එක element එකකට unique identifier එකක් දෙන්න භාවිතා වෙනවා. ✅', 'quiz3')">C: Element එකකට unique identifier එකක් දෙන්න ✅</button>
+    </div>
+    <p id="quizFeedback3"></p>
+  </div>
+</section>
+
+<script src="your-script.js"></script>
+
+<script>
+  function checkAnswer(selected, feedbackId, message) {
+    document.getElementById(feedbackId).innerText = message;
+  }
+</script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yasiru Lakshan | Learn HTML in Sinhala 🇱🇰</p>
+  </footer>
 
     <script src="index.js"></script>
 </body>
